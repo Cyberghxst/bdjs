@@ -1,0 +1,59 @@
+{
+  "name": "bdjs",
+  "version": "1.0.0",
+  "description": "A library to create your Discord bots with ease.",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/cjs/index.d.ts",
+  "scripts": {
+    "lint": "eslint ./src/**/* --fix --ext .ts",
+    "compile": "tsc -p tsconfig.cjs.json -w",
+    "build": "tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json && node pack.js",
+    "test:lexer": "node test/lexer.test.js",
+    "test:compiler": "node test/compiler.test.js"
+  },
+  "exports": {
+    "import": "./lib/esm/index.js",
+    "require": "./lib/cjs/index.js"
+  },
+  "keywords": [
+    "bdfd",
+    "bot designer for discord",
+    "forgescript",
+    "hytescript",
+    "bdscript"
+  ],
+  "author": "Cyberghxst",
+  "contributors": [
+    {
+      "name": "Cyberghxst",
+      "email": "cyberghxst@petalmail.com",
+      "url": "https://github.com/Cyberghxst"
+    }
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "tag": "latest",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cyberghxst/bdjs.git"
+  },
+  "devDependencies": {
+    "@types/hjson": "^2.4.3",
+    "@types/lodash": "^4.14.197",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "eslint": "^8.48.0",
+    "tslib": "^2.6.2",
+    "typedoc": "^0.25.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "discord.js": "^14.13.0",
+    "hjson": "^3.2.2",
+    "lodash": "^4.17.21",
+    "tiny-typed-emitter": "^2.1.0"
+  }
+}

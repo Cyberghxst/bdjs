@@ -1,0 +1,7 @@
+# Folders
+/lib
+/node_modules
+/test
+
+# Files
+pnpm-lock.yaml
